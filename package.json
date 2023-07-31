@@ -1,20 +1,23 @@
 {
-  "name": "vanilla-app-template",
+  "name": "test-sass",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/vanilla-app-template/",
+    "build": "vite build --base=/test-sass/",
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^4.0.5",
-    "glob": "^8.1.0"
+    "glob": "^8.1.0",
+    "postcss-import": "^15.1.0",
+    "sass": "^1.64.1",
+    "vite": "^4.0.5"
   },
   "author": "Alexander Repeta <alexander.repeta@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "modern-normalize": "^2.0.0",
     "vite-plugin-full-reload": "^1.0.5",
     "vite-plugin-html-inject": "^1.0.1"
   }
