@@ -1,60 +1,37 @@
-# Vanilla App Template
+# Vite with SASS Template
 
-Цей проєкт було створено за допомогою Vite. Для знайомства та налаштування
-додаткових можливостей [звернись до документації](https://vitejs.dev/).
+This project is based on the project [Vanilla App Template](https://github.com/goitacademy/vanilla-app-template).
 
-## Створення репозиторію за шаблоном
+New major feature is support SASS instead of standart CSS.
 
-Використовуй цей репозиторій організації GoIT як шаблон для створення
-репозиторію свого проєкту. Для цього натисни на кнопку `«Use this template»` і
-обери опцію `«Create a new repository»`, як показано на зображенні.
+
+## Creating a repository from a template
+
+Click `«Use this template»` then `«Create a new repository»`.
 
 ![Creating repo from a template step 1](./assets/template-step-1.png)
 
-На наступному етапі відкриється сторінка створення нового репозиторію. Заповни
-поле його імені, переконайся, що репозиторій публічний, після чого натисни
-кнопку `«Create repository from template»`.
+Enter the name of the repository and press `«Create repository from template»`.
 
 ![Creating repo from a template step 2](./assets/template-step-2.png)
 
-Після того, як репозиторій буде створено, необхідно перейти в налаштування
-створеного репозиторію на вкладку `Settings` > `Actions` > `General` як показано
-на зображенні.
+In the tab `Settings` > `Actions` > `General` scroll down to section 
+`«Workflow permissions»` and choose `«Read and write permissions»`.
 
 ![Settings GitHub Actions permissions step 1](./assets/gh-actions-perm-1.png)
 
-Проскроливши сторінку до самого кінця, в секції `«Workflow permissions»` обери
-опцію `«Read and write permissions»` і постав галочку в чекбоксі. Це необхідно
-для автоматизації процесу деплою проєкту.
-
 ![Settings GitHub Actions permissions step 2](./assets/gh-actions-perm-2.png)
 
-Тепер у тебе є особистий репозиторій проєкту, зі структурою файлів та папок
-репозиторію-шаблону. Далі працюй з ним, як з будь-яким іншим особистим
-репозиторієм, клонуй його собі на комп'ютер, пиши код, роби коміти та відправляй
-їх на GitHub.
 
-## Підготовка до роботи
+## Preparation for work
 
-1. Переконайся, що на комп'ютері встановлено LTS-версію Node.js.
-   [Скачай та встанови](https://nodejs.org/en/) її якщо необхідно.
-2. Встанови базові залежності проєкту в терміналі командою `npm install`.
-3. Запусти режим розробки, виконавши в терміналі команду `npm run dev`.
-4. Перейдіть у браузері за адресою
-   [http://localhost:5173](http://localhost:5173). Ця сторінка буде автоматично
-   перезавантажуватись після збереження змін у файли проєкту.
+1. Install LTS-version Node.js.
+   [Download and install](https://nodejs.org/en/).
+2. Install the basic dependencies of the project. Run the command in the terminal 
+  `npm install`.
+3. Start development mode, `npm run dev`.
+4. Go to the address in the browser [http://localhost:5173](http://localhost:5173).
 
-## Файли і папки
-
-- Файли розмітки компонентів сторінки повинні лежати в папці `src/partials` та
-  імпортуватись до файлу `index.html`. Наприклад, файл з розміткою хедера
-  `header.html` створюємо у папці `partials` та імпортуємо в `index.html`.
-- Файли стилів повинні лежати в папці `src/css` та імпортуватись до HTML-файлів
-  сторінок. Наприклад, для `index.html` файл стилів називається `index.css`.
-- Зображення додавай до папки `src/img`. Збирач оптимізує їх, але тільки при
-  деплої продакшн версії проєкту. Все це відбувається у хмарі, щоб не
-  навантажувати твій комп'ютер, тому що на слабких компʼютерах це може зайняти
-  багато часу.
 
 ## Деплой
 
