@@ -33,58 +33,28 @@ In the tab `Settings` > `Actions` > `General` scroll down to section
 4. Go to the address in the browser [http://localhost:5173](http://localhost:5173).
 
 
-## Деплой
+## Deploy
 
-Продакшн версія проєкту буде автоматично збиратися та деплоїтись на GitHub
-Pages, у гілку `gh-pages`, щоразу, коли оновлюється гілка `main`. Наприклад,
-після прямого пуша або прийнятого пул-реквесту. Для цього необхідно у файлі
-`package.json` змінити значення прапора `--base=/<REPO>/`, для команди `build`,
-замінивши `<REPO>` на назву свого репозиторію, та відправити зміни на GitHub.
+The production version of the project will be automatically built and deployed to GitHub Pages,
+ in the `gh-pages` branch, whenever the `main` branch is updated.
+ For this it is necessary in the file `package.json` change the value of the `--base=/<REPO>/` flag,
+ for the `build` command, replacing `<REPO>` with the name of your repository, and push your
+ changes to GitHub.
 
 ```json
 "build": "vite build --base=/<REPO>/",
 ```
-
-Далі необхідно зайти в налаштування GitHub-репозиторію (`Settings` > `Pages`) та
-виставити роздачу продакшн версії файлів з папки `/root` гілки `gh-pages`, якщо
-це не було зроблено автоматично.
+Next, you need to go to the settings of the GitHub repository (`Settings` > `Pages`) and
+set distribution of the production version of files from the `/root` folder of the `gh-pages` branch,
+if it was not done automatically.
 
 ![GitHub Pages settings](./assets/repo-settings.png)
 
-### Статус деплою
 
-Статус деплою крайнього коміту відображається іконкою біля його ідентифікатора.
+### Live page
 
-- **Жовтий колір** - виконується збірка та деплой проєкту.
-- **Зелений колір** - деплой завершився успішно.
-- **Червоний колір** - під час лінтингу, збірки чи деплою сталася помилка.
-
-Більш детальну інформацію про статус можна переглянути натиснувши на іконку, і в
-вікні, що випадає, перейти за посиланням `Details`.
-
-![Deployment status](./assets/deploy-status.png)
-
-### Жива сторінка
-
-Через якийсь час, зазвичай кілька хвилин, живу сторінку можна буде подивитися за
-адресою, вказаною на вкладці `Settings` > `Pages` в налаштуваннях репозиторію.
-Наприклад, ось посилання на живу версію для цього репозиторію
+The live page can be viewed by the address indicated on the `Settings` > `Pages` tab in the
+repository settings.
+For example, here is a link to the live version for this repository
 
 [https://goitacademy.github.io/vanilla-app-template/](https://goitacademy.github.io/vanilla-app-template/).
-
-Якщо відкриється порожня сторінка, переконайся, що у вкладці `Console` немає
-помилок пов'язаних з неправильними шляхами до CSS та JS файлів проєкту
-(**404**). Швидше за все у тебе неправильне значення прапора `--base` для
-команди `build` у файлі `package.json`.
-
-## Як це працює
-
-![How it works](./assets/how-it-works.png)
-
-1. Після кожного пуша у гілку `main` GitHub-репозиторію, запускається
-   спеціальний скрипт (GitHub Action) із файлу `.github/workflows/deploy.yml`.
-2. Усі файли репозиторію копіюються на сервер, де проєкт ініціалізується та
-   проходить лінтинг та збірку перед деплоєм.
-3. Якщо всі кроки пройшли успішно, зібрана продакшн версія файлів проєкту
-   відправляється у гілку `gh-pages`. В іншому випадку, у лозі виконання скрипта
-   буде вказано в чому проблема.
