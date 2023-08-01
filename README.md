@@ -57,4 +57,4 @@ The live page can be viewed by the address indicated on the `Settings` > `Pages`
 repository settings.
 For example, here is a link to the live version for this repository
 
-[https://goitacademy.github.io/vanilla-app-template/](https://goitacademy.github.io/vanilla-app-template/).
+[https://dolphin-vr.github.io/vite-sass-template/](https://dolphin-vr.github.io/vite-sass-template/).
