@@ -1,11 +1,11 @@
 {
-  "name": "test-sass",
+  "name": "vite-sass-template",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.2",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/test-sass/",
+    "build": "vite build --base=/vite-sass-template/",
     "preview": "vite preview"
   },
   "devDependencies": {
@@ -16,6 +16,7 @@
   },
   "author": "Alexander Repeta <alexander.repeta@gmail.com>",
   "license": "ISC",
+  "sass support by": "dolphin-vr <https://github.com/dolphin-vr>",
   "dependencies": {
     "modern-normalize": "^2.0.0",
     "vite-plugin-full-reload": "^1.0.5",
